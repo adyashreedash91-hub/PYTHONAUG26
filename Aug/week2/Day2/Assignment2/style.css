@@ -1,0 +1,25 @@
+
+        p {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 200;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #33364f;
+        }
+
+        .orange {
+            color: #f57c00;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: #4f6ec4;
+            font-weight: bold;
+        }
+
+        .purple {
+            color: #6846c7;
+            font-weight: bold;
+        }
+       
+        

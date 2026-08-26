@@ -1,0 +1,25 @@
+h1{
+    font-size: 28px;
+            font-weight: normal;
+}
+.red{
+    color: #c0392b;
+}
+.green {
+            color: #397a42;
+table{
+    margin-top: 35px;
+    border-collapse: collapse;
+            font-size: 18px;
+}
+th {
+    padding:8px 45px 8px 5px;
+}
+                }
+         td {
+            padding: 6px 45px ;
+        }
+        tr:nth-child(even) {
+            background-color: #333;
+            color: white;
+        }

@@ -5,26 +5,26 @@
    => general sibling selector
 */
 
-/* .parent p{
+ .parent p{
     background-color: red;
-} */
+} 
 
-/* .parent>p{
+ .parent>p{
     background-color: blue;
-} */
+} 
 
-/* .parent+p{
+ .parent+p{
     background-color: aqua;
-} */
+} 
 
-/* .parent~p{
+ .parent~p{
     background-color: brown;
-} */
+} 
 
-/* Attribute */
-/* div[id="box-id1"]{
+ Attribute 
+ div[id="box-id1"]{
     background-color: red;
-} */
+} 
 
 /* pseudo class selector */
 /* :hover
@@ -41,7 +41,7 @@
   background-color: aqua;
 }
 
-/* .box:hover {
+ .box:hover {
   background-color: red;
 }
 
