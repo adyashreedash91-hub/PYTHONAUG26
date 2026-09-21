@@ -26,7 +26,7 @@ console.log(typeof(4 + + "sadfs" + 6));
 //Ternary operator
 // syntax
 // if(cond){
-//       block of code
+// block of code
 // }
 
 if (false) {
