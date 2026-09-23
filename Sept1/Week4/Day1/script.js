@@ -16,7 +16,6 @@ console.log(arr[1]);
 let newArr = new Array();
 console.log(newArr);
 console.log(Array.isArray(newArr));
-
 // Array Properties(variable) and Method(func)
 
 let numbArr = [1, 2, 3, 4, 5, 6];
