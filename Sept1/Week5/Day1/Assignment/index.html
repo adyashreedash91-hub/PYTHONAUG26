@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration & Login</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px;
+
+        background: #0f172a;
+    }
+
+    .container {
+        width: 900px;
+        max-width: 100%;
+
+        display: flex;
+
+        background: white;
+
+        border-radius: 20px;
+        overflow: hidden;
+
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    
+
+    .welcome {
+        width: 45%;
+
+        padding: 50px 35px;
+
+        background: linear-gradient(
+            135deg,
+            #0f172a,
+            #1d4ed8
+        );
+
+        color: white;
+
+        text-align: center;
+    }
+
+    .welcome h1 {
+        font-size: 42px;
+        margin-top: 60px;
+    }
+
+    .welcome p {
+        line-height: 1.6;
+    }
+
+    .welcome-icon {
+        font-size: 70px;
+        margin: 30px 0;
+    }
+
+    .welcome h3 {
+        font-size: 22px;
+    }
+
+
+    
+    .form-section {
+        width: 55%;
+
+        padding: 40px;
+
+        background: #ffffff;
+    }
+
+    .form-box h2 {
+        color: #0f172a;
+
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        color: #64748b;
+
+        margin-bottom: 25px;
+    }
+
+
+ 
+
+    .input-group {
+        margin-bottom: 16px;
+    }
+
+    .input-group label {
+        display: block;
+
+        margin-bottom: 6px;
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        color: #334155;
+    }
+
+    .input-group input {
+        width: 100%;
+
+        padding: 12px;
+
+        border: 1px solid #cbd5e1;
+
+        border-radius: 8px;
+
+        outline: none;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+    .input-group input:focus {
+        border-color: #2563eb;
+
+        box-shadow:
+            0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+
+    
+    .password-box {
+        position: relative;
+    }
+
+    .password-box span {
+        position: absolute;
+
+        right: 12px;
+        top: 10px;
+
+        cursor: pointer;
+    }
+
+
+    
+    button {
+        width: 100%;
+
+        padding: 13px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        background: linear-gradient(
+            135deg,
+            #2563eb,
+            #38bdf8
+        );
+
+        color: white;
+
+        font-size: 16px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        margin-top: 8px;
+
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: linear-gradient(
+            135deg,
+            #1d4ed8,
+            #0284c7
+        );
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 8px 20px rgba(37, 99, 235, 0.25);
+    }
+
+
+    
+
+    .switch {
+        text-align: center;
+
+        color: #64748b;
+
+        margin-top: 18px;
+    }
+
+    .switch span {
+        color: #2563eb;
+
+        font-weight: bold;
+
+        cursor: pointer;
+    }
+
+    .switch span:hover {
+        text-decoration: underline;
+    }
+
+
+    
+
+    .hidden {
+        display: none;
+    }
+
+
+    
+    .success {
+        text-align: center;
+    }
+
+    .success-icon {
+        width: 70px;
+        height: 70px;
+
+        margin: 20px auto;
+
+        border-radius: 50%;
+
+        background: #2563eb;
+
+        color: white;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-size: 40px;
+    }
+
+
+   
+
+    .logout {
+        background: #0f172a;
+    }
+
+    .logout:hover {
+        background: #020617;
+    }
+
+
+    
+    @media (max-width: 700px) {
+
+        .container {
+            flex-direction: column;
+        }
+
+        .welcome,
+        .form-section {
+            width: 100%;
+        }
+
+        .welcome {
+            padding: 30px;
+        }
+
+        .welcome h1 {
+            margin-top: 10px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+
+        <div class="welcome">
+
+            <h1>Welcome!</h1>
+
+            <p>
+                Create your account and start your journey with us.
+            </p>
+
+            <div class="welcome-icon">
+                👋
+            </div>
+
+            <h3>Registration & Login</h3>
+
+            <p>
+                Simple and user-friendly authentication system.
+            </p>
+
+        </div>
+
+
+        
+
+        <div class="form-section">
+
+
+           
+
+            <div id="registerBox" class="form-box">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Register a new account
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="input-group">
+
+                        <label>Full Name</label>
+
+                        <input type="text" placeholder="Enter your name"><br>
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Age</label>
+
+                        <input type="number" placeholder="Enter your age"><br>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="number" placeholder="Enter 10 digit phone number"><br>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email" placeholder="Enter your email"><br>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                            <input type="password" placeholder="Create password"><br>
+
+                            <span
+                                onclick="togglePassword('registerPassword', this)">
+                                show
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Register
+                    </button>
+
+
+                    <p class="switch">
+
+                        Already have an account?
+
+                        <span onclick="showLogin()">
+                            Login
+                        </span>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+           
+
+            <div id="loginBox" class="form-box hidden">
+
+                <h2>Welcome Back!</h2>
+
+                <p class="subtitle">
+                    Login to your account
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                            >
+
+                            <span
+                                onclick="togglePassword('loginPassword', this)">
+                                
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Login
+                    </button>
+
+
+                    <p class="switch">
+
+                        Don't have an account?
+
+                        <span onclick="showRegister()">
+                            Register
+                        </span>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+           
+
+            <div id="dashboard" class="form-box success hidden">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>Login Successful!</h2>
+
+                <p id="welcomeUser"></p>
+
+                <button
+                    class="logout"
+                    onclick="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+   
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
